@@ -1,0 +1,22 @@
+default:
+  suites:
+    cedis:
+      paths:    [ %paths.base%/features/cedis ]
+      contexts:
+        - FeatureCedisContext
+  formatters:
+    default:
+      name: pretty
+    html:
+      output_path: %paths.base%/build/html/behat
+  extensions:
+    Behat\MinkExtension:
+      selenium2: ~
+      base_url: http://localhost/Proyecto-CEDIS/
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
+      file_name: index
+      print_args: true
+      print_outp: true
+      loop_break: true

@@ -1,0 +1,4 @@
+Para Generar reporte en carpeta especifica
+  $ bin/behat --format html --out report
+Para Genera reporte en carpeta definida en behat.yml
+  $ bin/behat --format html
